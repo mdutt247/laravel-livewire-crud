@@ -26,4 +26,5 @@ Below commands are used to create this project
 8. `php artisan vendor:publish --tag=jetstream-views`
 9. `php artisan make:model Contact -mf` to create model, migration and factory
 10. `php artisan migrate`
-11. `php artisan make:livewire contact`
+11. `php artisan db:seed`
+12. `php artisan make:livewire contact`
