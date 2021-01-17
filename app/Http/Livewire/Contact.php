@@ -26,7 +26,7 @@ class Contact extends Component
     {
         $this->validate([
             'name' => 'required|min:5',
-            'email' => 'required|email'
+            'email' => 'required|email|unique:contacts'
         ]);
 
         ContactModel::create([
