@@ -16,13 +16,14 @@ Follow below steps to execute this project
 
 Below commands are used to create this project
 
-`composer create-project laravel/laravel laravel-livewire-crud`
-`cd laravel-livewire-crud`
-`composer require laravel/jetstream`
-`php artisan jetstream:install livewire`
-`npm install`
-`npm run dev`
-`php artisan migrate`
-`php artisan vendor:publish --tag=jetstream-views`
-`php artisan make:model Contact -mf` to create model, migration and factory
-`php artisan make:livewire contact`
+1. `composer create-project laravel/laravel laravel-livewire-crud`
+2. `cd laravel-livewire-crud`
+3. `composer require laravel/jetstream`
+4. `php artisan jetstream:install livewire`
+5. `npm install`
+6. `npm run dev`
+7. `php artisan migrate`
+8. `php artisan vendor:publish --tag=jetstream-views`
+9. `php artisan make:model Contact -mf` to create model, migration and factory
+10. `php artisan migrate`
+11. `php artisan make:livewire contact`
