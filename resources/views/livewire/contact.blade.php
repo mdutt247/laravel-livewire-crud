@@ -32,16 +32,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($records as $row)
+                    @if(!empty($records))
+                        @foreach($records as $row)
+                            <tr>
+                                <td class="px-4 py-2 border">{{ $row->name }}</td>
+                                <td class="px-4 py-2 border">{{ $row->email }}</td>
+                                <td class="px-4 py-2 border">
+                                    <button wire:click="edit({{$row->id}})" class="inline-flex items-center px-4 py-2 my-3 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Edit</button>
+                                    <button wire:click="delete({{$row->id}})" class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-600 transition ease-in-out duration-150">Delete</button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @else
                     <tr>
-                        <td class="px-4 py-2 border">{{ $row->name }}</td>
-                        <td class="px-4 py-2 border">{{ $row->email }}</td>
-                        <td class="px-4 py-2 border">
-                            <button wire:click="edit({{$row->id}})" class="inline-flex items-center px-4 py-2 my-3 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">Edit</button>
-                            <button wire:click="delete({{$row->id}})" class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-600 transition ease-in-out duration-150">Delete</button>
-                        </td>
+                        <td class="px-4 py-2 border text-red-500" colspan="3">No contacts found.</td>
                     </tr>
-                    @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>
