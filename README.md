@@ -28,3 +28,7 @@ Below commands are used to create this project
 10. `php artisan migrate`
 11. `php artisan db:seed`
 12. `php artisan make:livewire contact`
+
+Twitter: [kotagin](https://twitter.com/kotagin)
+E-mail: [m.dutt@mditech.net](mailto:m.dutt@mditech.net)
+Website: [mditech.net](https://mditech.net)
